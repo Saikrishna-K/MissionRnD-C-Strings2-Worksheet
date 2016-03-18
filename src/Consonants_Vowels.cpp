@@ -20,7 +20,33 @@ NOTES: Don't create new string , Dont return anything ,you have been given two p
 #include <stddef.h>
 
 
-void count_vowels_and_consonants(char *str,int *consonants, int *vowels){
+void count_vowels_and_consonants(char *str, int *consonants, int *vowels){
+
+	
+
+	int i = 0, value;
+	*consonants = 0, *vowels = 0;
+	if (str!=NULL)
+	while (str[i] != '\0')
+	{
+		value = str[i] - '`';// SUBTRACTING SMALL ALPHABET FROM '`' TO GET 1 TO 26 NUMBER, IF
+		             
+		if (value < 1)        // IF A CAPITAL ALPHABET OCCURS THE SUBTRACTING THE SAME ALPHABET USING '@' TO GET 1 TO 26 NUMBER;
+			value = str[i] - '@';
+
+		if (value == 1 || value == 5 || value == 9 || value == 15 || value == 21)
+		{
+			(*vowels)++;
+
+		}
+		else if (value >0 && value < 27)
+		{
+			(*consonants)++;
+
+		}
+
+      i++;
+	}
 
 
 }
