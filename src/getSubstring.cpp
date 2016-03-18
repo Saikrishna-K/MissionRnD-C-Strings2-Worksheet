@@ -19,5 +19,19 @@ original String
 
 char * get_sub_string(char *str, int i, int j){
 
-    return NULL;
+	if (str == NULL || str == '\0' || i < 0 || j < 0 || i>j)  return NULL;
+
+	int k = 0;
+	char *subString = (char *)calloc(j - i + 2, sizeof(char));// Allocating memory for subString
+
+	while (i <= j)
+	{
+
+		subString[k++] = str[i++];
+
+	}
+	subString[k] = '\0';
+
+
+	return subString;
 }
