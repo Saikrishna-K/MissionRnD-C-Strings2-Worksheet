@@ -39,6 +39,7 @@ char * get_last_word(char * str){
 
 	}
 
+
 	if (j == 0)     // if the given string is an empty string returning empty string
 		return "";
 
